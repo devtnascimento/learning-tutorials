@@ -1,0 +1,21 @@
+# url
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodb-configmap
+data:
+  database_url: mongodb-service
+
+---
+
+# secret
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mongodb-secret
+type: Opaque
+data:
+  mongo-root-username: ZGV2dG5hc2NpbWVudG8=
+  mongo-root-password: MTIzNA==
